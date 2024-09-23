@@ -32,7 +32,7 @@ SELECT
     Attitude / (SELECT MAX(Attitude) FROM penilaian) AS normalisasi_Attitude,
     Layanan / (SELECT MAX(Layanan) FROM penilaian) AS normalisasi_Layanan,
     (SELECT MIN(Presensi) FROM penilaian) / Presensi AS normalisasi_Presensi,
-    Ketelitian / (SELECT MAX(Ketelitian) FROM penilaian) AS normalisasi_Ketelitian,
+    Ketelitian / (SELECT MAX(Ketelitian) FROM penilaian) AS normalisasi_Ketelitian
 FROM penilaian;
 
 SELECT 
